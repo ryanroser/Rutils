@@ -181,11 +181,7 @@ pruneObservations = function(allObs, percentile, min_n=1) {
   }
   
   clusters_with_obs = sort(unique(c(obs[,1],obs[,2])))
-  
-  # get all cluster names, ordered by max(z) for name, decreasing
-  #maxZ = tapply(c(productEdges$z,productEdges$z),c(productEdges$x,productEdges$y),max,na.rm=T)
-  #maxZ = tapply(c(z,z),c(x,y),max,na.rm=T)
-  
+    
   all_clusters = sort(unique(c(x,y)))
   for( i in all_clusters ) {
     # there arent any observations, so pick the observation with the greatest z
